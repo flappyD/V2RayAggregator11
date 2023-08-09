@@ -544,7 +544,6 @@ merge nodes w/o dup: `42`
 
 
 ### node sources
-- [RenaLio/Mux2sub](https://github.com/RenaLio/Mux2sub), number of nodes: `248`
 - [clash.221207.xyz/pubclashyaml](https://clash.221207.xyz/pubclashyaml), number of nodes: `800`
 - [tbbatbb/Proxy](https://github.com/tbbatbb/Proxy), number of nodes: `559`
 - [adminaliang/v2ray](https://github.com/adminaliang/v2ray), number of nodes: `16`
