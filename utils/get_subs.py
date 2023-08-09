@@ -521,9 +521,9 @@ class subs:
                                                                             else:
                                                                                 bad_lines += 1
                                                                         else:
-                                                                            safe_clash.append(cl_res)
+                                                                            bad_lines += 1
                                                                     else:
-                                                                        safe_clash.append(cl_res)
+                                                                        bad_lines += 1
                                                                 else:
                                                                     bad_lines += 1
 
@@ -532,13 +532,13 @@ class subs:
                                                                     if "tls" in cl_temp and cl_temp['tls'] == False:
                                                                         bad_lines += 1
                                                                     else:
-                                                                        safe_clash.append(cl_res)
+                                                                        bad_lines += 1
                                                                         
                                                                 else:
-                                                                    safe_clash.append(cl_res)
+                                                                    bad_lines += 1
 
                                                             else:
-                                                                safe_clash.append(cl_res)
+                                                                bad_lines += 1
                                                             
                                                 except Exception as e1:
                                                     bad_lines += 1
