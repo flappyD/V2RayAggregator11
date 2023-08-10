@@ -641,5 +641,21 @@
     "url": "https://raw.githubusercontent.com/LonUp/NodeList/main/Clash/Node/Latest.yaml",
     "update_method": "auto",
     "enabled": true
+  },
+  {
+    "id": 79,
+    "remarks": "yebekhe/TelegramV2rayCollector",
+    "site": "https://github.com/yebekhe/TelegramV2rayCollector",
+    "url": "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/donated|https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix|https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/shadowsocks|https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/trojan|https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess|https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless",
+    "update_method": "auto",
+    "enabled": true
+  },
+  {
+    "id": 80,
+    "remarks": "mahdibland/V2RayAggregator",
+    "site": "https://github.com/mahdibland/V2RayAggregator",
+    "url": "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/vmess.txt|https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/trojan.txt|https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/ssr.txt|https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/ss.txt",
+    "update_method": "auto",
+    "enabled": true
   }
 ]
