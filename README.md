@@ -544,10 +544,10 @@ merge nodes w/o dup: `42`
 
 
 ### node sources
-- [clash.221207.xyz/pubclashyaml](https://clash.221207.xyz/pubclashyaml), number of nodes: `800`
-- [tbbatbb/Proxy](https://github.com/tbbatbb/Proxy), number of nodes: `559`
+- [clash.221207.xyz/pubclashyaml](https://clash.221207.xyz/pubclashyaml), number of nodes: `799`
+- [tbbatbb/Proxy](https://github.com/tbbatbb/Proxy), number of nodes: `558`
 - [adminaliang/v2ray](https://github.com/adminaliang/v2ray), number of nodes: `16`
-- [free.iam7.tk/clash](https://free.iam7.tk/clash), number of nodes: `659`
+- [free.iam7.tk/clash](https://free.iam7.tk/clash), number of nodes: `637`
 - [hermanb001/ProxyTest](https://github.com/hermanb001/ProxyTest), number of nodes: `125`
 
 ## Softwares
