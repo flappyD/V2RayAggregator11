@@ -101,7 +101,7 @@ proxy-providers:
     path: ./providers/airports.yaml
     health-check:
       enable: true
-      interval: 3600
+      interval: 600
       lazy: true
       url: "https://cp.cloudflare.com"
       #url: "https://cdn.jsdelivr.net"
@@ -114,7 +114,7 @@ proxy-providers:
     path: ./providers/aggregator.yaml
     health-check:
       enable: true
-      interval: 3600
+      interval: 600
       lazy: true
       url: "https://cp.cloudflare.com"
       #url: "https://cdn.jsdelivr.net"
