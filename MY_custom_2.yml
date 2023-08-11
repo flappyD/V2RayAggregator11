@@ -72,6 +72,7 @@ proxy-groups:
 
 - name: auto
   type: url-test
+  filter: "^((?!(CN|IN|HK)).)*$"
   #filter: "🏁"
   use:
     #- local
