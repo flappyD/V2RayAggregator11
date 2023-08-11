@@ -106,7 +106,8 @@ proxy-providers:
       enable: true
       interval: 600
       #lazy: true
-      url: "https://cp.cloudflare.com"
+      url: "https://belarus2020.org"
+      #url: "https://cp.cloudflare.com"
       #url: "https://cdn.jsdelivr.net"
       #url: "https://detectportal.firefox.com/success.txt"
 
@@ -119,7 +120,8 @@ proxy-providers:
       enable: true
       interval: 600
       #lazy: true
-      url: "https://cp.cloudflare.com"
+      url: "https://belarus2020.org"
+      #url: "https://cp.cloudflare.com"
       #url: "https://cdn.jsdelivr.net"
       #url: "https://detectportal.firefox.com/success.txt"
 
