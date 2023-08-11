@@ -96,7 +96,7 @@ proxy-providers:
     url: "https://raw.githubusercontent.com/flappyD/V2RayAggregator11/master/sub/airport_merge_yaml.yml"
     interval: 86400
     path: ./providers/airports.yaml
-    filter: "^((?!(CN|IN)).)*$"
+    filter: "^((?!(CN|IN|HK)).)*$"
     health-check:
       enable: true
       interval: 3600
@@ -110,7 +110,7 @@ proxy-providers:
     url: "https://raw.githubusercontent.com/flappyD/V2RayAggregator11/master/sub/sub_merge_yaml.yml"
     interval: 86400
     path: ./providers/aggregator.yaml
-    filter: "^((?!(CN|IN)).)*$"
+    filter: "^((?!(CN|IN|HK)).)*$"
     health-check:
       enable: true
       interval: 3600
