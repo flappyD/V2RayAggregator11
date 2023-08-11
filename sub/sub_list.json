@@ -657,5 +657,13 @@
     "url": "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/vmess.txt|https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/trojan.txt|https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/ssr.txt|https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/ss.txt",
     "update_method": "auto",
     "enabled": true
+  },
+  {
+    "id": 81,
+    "remarks": "mahdibland/V2RayAggregator",
+    "site": "https://github.com/mahdibland/V2RayAggregator",
+    "url": "https://raw.githubusercontent.com/yebekhe/ConfigCollector/31b2cafe249f573b064ecb4fc117c68bd293f0e0/sub/mix|https://raw.githubusercontent.com/yebekhe/ConfigCollector/31b2cafe249f573b064ecb4fc117c68bd293f0e0/sub/shadowsocks|https://raw.githubusercontent.com/yebekhe/ConfigCollector/31b2cafe249f573b064ecb4fc117c68bd293f0e0/sub/trojan|https://raw.githubusercontent.com/yebekhe/ConfigCollector/31b2cafe249f573b064ecb4fc117c68bd293f0e0/sub/vless|https://raw.githubusercontent.com/yebekhe/ConfigCollector/31b2cafe249f573b064ecb4fc117c68bd293f0e0/sub/vmess|https://raw.githubusercontent.com/yebekhe/ConfigCollector/31b2cafe249f573b064ecb4fc117c68bd293f0e0/sub/reality",
+    "update_method": "auto",
+    "enabled": true
   }
 ]
