@@ -8,6 +8,19 @@
 # https://github.com/MetaCubeX/ClashMetaForAndroid/releases:
 ## Other clients: https://docs.metacubex.one/used
 
+# Port of HTTP(S) proxy server on the local end
+# port: 7890
+
+# Port of SOCKS5 proxy server on the local end
+# socks-port: 7891
+
+# Transparent proxy server port for Linux and macOS (Redirect TCP and TProxy UDP)
+# redir-port: 7892
+
+# Transparent proxy server port for Linux (TProxy TCP and TProxy UDP)
+# tproxy-port: 7893
+
+# HTTP(S) and SOCKS4(A)/SOCKS5 server on the same port
 mixed-port: 7890
 allow-lan: true
 tcp-concurrent: true
@@ -21,6 +34,9 @@ external-controller: 127.0.0.1:9090
 profile:
   store-selected: false ## It's better to default to "auto" every time it restarts.
   store-fake-ip: true
+
+# Outbound interface name
+interface-name: en0
 
 #tun:
   #enable: true
@@ -56,7 +72,7 @@ dns:
 proxy-groups:
 
 - name: global
-  type: select
+  type: relay
   filter: "^((?!(CN|IN|HK|AE)).)*$"
   interval: 600
   proxies:
@@ -66,7 +82,7 @@ proxy-groups:
     - REJECT
 
 - name: manual
-  type: select
+  type: load-balance
   filter: "^((?!(CN|IN|HK|AE)).)*$"
   interval: 600
   use:
@@ -75,9 +91,9 @@ proxy-groups:
     - aggregator
 
 - name: auto
-  type: url-test
+  type: fallback
   filter: "^((?!(CN|IN|HK|AE)).)*$"
-  interval: 600
+  interval: 300
   #filter: "🏁"
   use:
     #- local
@@ -100,13 +116,14 @@ proxy-providers:
   airports:
     type: http
     url: "https://raw.githubusercontent.com/flappyD/V2RayAggregator11/master/sub/airport_merge_yaml.yml"
-    interval: 86400
+    interval: 3600
     path: ./providers/airports.yaml
     health-check:
       enable: true
       interval: 600
       #lazy: true
-      url: "https://belarus2020.org"
+      url: "http://www.gstatic.com/generate_204"
+      #url: "https://belarus2020.org"
       #url: "https://cp.cloudflare.com"
       #url: "https://cdn.jsdelivr.net"
       #url: "https://detectportal.firefox.com/success.txt"
@@ -114,13 +131,14 @@ proxy-providers:
   aggregator:
     type: http
     url: "https://raw.githubusercontent.com/flappyD/V2RayAggregator11/master/sub/sub_merge_yaml.yml"
-    interval: 86400
+    interval: 3600
     path: ./providers/aggregator.yaml
     health-check:
       enable: true
       interval: 600
       #lazy: true
-      url: "https://belarus2020.org"
+      url: "http://www.gstatic.com/generate_204"
+      #url: "https://belarus2020.org"
       #url: "https://cp.cloudflare.com"
       #url: "https://cdn.jsdelivr.net"
       #url: "https://detectportal.firefox.com/success.txt"
@@ -134,14 +152,12 @@ rule-providers:
     interval: 604800
 
 rules:
-  - GEOSITE,category-ads-all,REJECT ## Rejects advertisements.
-  - GEOSITE,win-spy,REJECT ## Rejects MS Windows analytics and spying.
-  - GEOIP,BY,DIRECT ## Check "provider-meta.yml" for Iran's config.
-  - GEOSITE,by,DIRECT ## Check "provider-meta.yml" for Iran's config.
-  - DOMAIN-SUFFIX,by,DIRECT ## Check "provider-meta.yml" for Iran's config.
-  - GEOSITE,category-games,DIRECT ## Online gaming
+  - GEOIP,BY,DIRECT ## For be ip.
   - GEOIP,private,DIRECT ## Loopback and LAN IPs
+  - IP-CIDR,127.0.0.0/8,DIRECT
   - RULE-SET,applications,DIRECT ## P2P software e.g. BitTorrent.
+  - DOMAIN-SUFFIX,by,DIRECT ## For be suffix.
   - DOMAIN,yacd.metacubex.one,DIRECT ## Yet Another Clash Dashbord for Clash.Meta
   - DOMAIN,clash.metacubex.one,DIRECT ## Razord
+  - RULE-SET,apple,REJECT # Premium only
   - MATCH,global
