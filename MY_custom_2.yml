@@ -159,5 +159,4 @@ rules:
   - DOMAIN-SUFFIX,by,DIRECT ## For be suffix.
   - DOMAIN,yacd.metacubex.one,DIRECT ## Yet Another Clash Dashbord for Clash.Meta
   - DOMAIN,clash.metacubex.one,DIRECT ## Razord
-  - RULE-SET,apple,REJECT # Premium only
   - MATCH,global
