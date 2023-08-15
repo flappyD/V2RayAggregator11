@@ -84,7 +84,8 @@ proxy-groups:
 - name: manual
   type: load-balance
   filter: "^((?!(CN|IN|HK|AE)).)*$"
-  interval: 600
+  interval: 300
+  tolerance: 100
   use:
     #- local
     - airports
@@ -94,6 +95,7 @@ proxy-groups:
   type: fallback
   filter: "^((?!(CN|IN|HK|AE)).)*$"
   interval: 300
+  tolerance: 100
   #filter: "🏁"
   use:
     #- local
@@ -121,7 +123,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 600
-      #lazy: true
+      lazy: true
       url: "http://www.gstatic.com/generate_204"
       #url: "https://belarus2020.org"
       #url: "https://cp.cloudflare.com"
@@ -136,7 +138,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 600
-      #lazy: true
+      lazy: true
       url: "http://www.gstatic.com/generate_204"
       #url: "https://belarus2020.org"
       #url: "https://cp.cloudflare.com"
