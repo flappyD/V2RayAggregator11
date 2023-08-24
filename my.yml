@@ -1,0 +1,113 @@
+# Port of HTTP(S) proxy server on the local end
+# port: 7890
+
+# Port of SOCKS5 proxy server on the local end
+# socks-port: 7891
+
+# Transparent proxy server port for Linux and macOS (Redirect TCP and TProxy UDP)
+# redir-port: 7892
+
+# Transparent proxy server port for Linux (TProxy TCP and TProxy UDP)
+# tproxy-port: 7893
+
+# HTTP(S) and SOCKS4(A)/SOCKS5 server on the same port
+mixed-port: 7890
+allow-lan: true
+tcp-concurrent: true
+find-process-mode: always
+global-client-fingerprint: random
+geodata-mode: true
+mode: rule
+log-level: silent/error/warning/info/debug ## silent/error/warning/info/debug
+ipv6: true
+external-controller: 127.0.0.1:9090
+profile:
+  store-selected: false ## It's better to default to "auto" every time it restarts.
+  store-fake-ip: true
+
+# Outbound interface name
+interface-name: en0
+
+#tun:
+  #enable: true
+  #stack: system ## system/lwip/gvisor
+  #dns-hijack:
+    #- 0.0.0.0:53
+  #auto-detect-interface: true
+  #auto-route: true
+  #mtu: 9000
+  #strict_route: true
+
+dns:
+  enable: true
+  #listen: 127.0.0.1:53 ## Or 0.0.0.0:53 for LAN.
+  ipv6: true
+  prefer-h3: true
+  default-nameserver: 
+    - '127.0.0.1'
+    - '1.1.1.1'
+  enhanced-mode: fake-ip
+  use-hosts: true
+  nameserver:
+    - '127.0.0.1'
+    - '1.1.1.1'
+  fallback:
+    - "https://1.1.1.1/dns-query"
+    - "https://8.8.8.8/dns-query"
+  fallback-filter:
+    geoip: false
+
+proxy-groups:
+
+- name: global
+  type: relay
+  filter: "^((?!(CN|IN|HK|AE)).)*$"
+  interval: 300
+  tolerance: 100
+  use:
+    - aggregator
+
+
+proxy-providers:
+
+
+  aggregator:
+    type: http
+    url: "https://raw.githubusercontent.com/flappyD/V2RayAggregator11/master/sub/sub_merge_yaml.yml"
+    interval: 3600
+    path: ./providers/aggregator.yaml
+    health-check:
+      enable: true
+      interval: 600
+      lazy: true
+      url: "http://www.gstatic.com/generate_204"
+      #url: "https://belarus2020.org"
+      #url: "https://cp.cloudflare.com"
+      #url: "https://cdn.jsdelivr.net"
+      #url: "https://detectportal.firefox.com/success.txt"
+
+rule-providers:
+  applications:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
+    path: ./ruleset/applications.yaml
+    interval: 604800
+
+  MYrule:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/flappyD/V2RayAggregator11/master/MYrule.txt"
+    path: ./ruleset/MYrule.yaml
+    interval: 604800
+
+rules:
+  - GEOIP,BY,DIRECT ## For be ip.
+  - GEOIP,private,DIRECT ## Loopback and LAN IPs
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - RULE-SET,applications,DIRECT ## P2P software e.g. BitTorrent.
+  - RULE-SET,MYrule,DIRECT
+  - DOMAIN-SUFFIX,by,DIRECT ## For be suffix.
+  - DOMAIN,yacd.metacubex.one,DIRECT ## Yet Another Clash Dashbord for Clash.Meta
+  - DOMAIN,clash.metacubex.one,DIRECT ## Razord
+  - MATCH,global
