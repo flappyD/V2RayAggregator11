@@ -60,7 +60,7 @@ dns:
 proxy-groups:
 
 - name: global
-  type: relay
+  type: fallback
   filter: "^((?!(CN|IN|HK|AE)).)*$"
   interval: 300
   tolerance: 100
