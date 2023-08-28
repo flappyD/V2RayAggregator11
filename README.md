@@ -549,7 +549,7 @@ merge nodes w/o dup: `6893`
 - [mianfeifq/share](https://github.com/mianfeifq/share), number of nodes: `114`
 - [FiFier/v2rayShare](https://github.com/FiFier/v2rayShare), number of nodes: `47`
 - [huanongkejizhijia/clashnode](https://github.com/huanongkejizhijia/clashnode), number of nodes: `50`
-- [RenaLio/Mux2sub](https://github.com/RenaLio/Mux2sub), number of nodes: `354`
+- [RenaLio/Mux2sub](https://github.com/RenaLio/Mux2sub), number of nodes: `314`
 - [colatiger/v2ray-nodes](https://github.com/colatiger/v2ray-nodes), number of nodes: `121`
 - [oslook/clash-freenode](https://github.com/oslook/clash-freenode), number of nodes: `50`
 - [ssrsub/ssr](https://github.com/ssrsub/ssr), number of nodes: `231`
