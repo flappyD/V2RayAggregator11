@@ -145,6 +145,21 @@ proxy-providers:
       #url: "https://cdn.jsdelivr.net"
       #url: "https://detectportal.firefox.com/success.txt"
 
+  aggregator_ss_plugin:
+    type: http
+    url: "https://raw.githubusercontent.com/flappyD/V2RayAggregator/master/sub/sub_merge_yaml.yml"
+    interval: 3600
+    path: ./providers/aggregator_ss_plugin.yaml
+    health-check:
+      enable: true
+      interval: 600
+      lazy: true
+      url: "http://www.gstatic.com/generate_204"
+      #url: "https://belarus2020.org"
+      #url: "https://cp.cloudflare.com"
+      #url: "https://cdn.jsdelivr.net"
+      #url: "https://detectportal.firefox.com/success.txt"
+
 rule-providers:
   applications:
     type: http
