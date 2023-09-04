@@ -17,13 +17,7 @@ dns:
   - https://dns.google/dns-query
   - tls://dns.google:853
 proxies:
-- name: 🇨🇳CN-183.56.229.236-068 | 12.033MB
-  server: gzdx01.jcnode.top
-  port: 24448
-  type: trojan
-  password: bc4fbde9-8b09-4868-9e75-5fd2c8b73f01
-  sni: rctw02.ckcloud.info
-  skip-cert-verify: false
+- null
 proxy-groups:
 - name: Global ©️
   type: select
@@ -98,6 +92,6 @@ proxy-groups:
   interval: 300
   tolerance: 100
   proxies:
-  - 🇨🇳CN-183.56.229.236-068 | 12.033MB
+  - DIRECT
 rules:
 - MATCH,Global ©️
