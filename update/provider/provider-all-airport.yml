@@ -1,2 +1,1 @@
 proxies:
-  - {name: 🇨🇳 CN-183.249.20.192-000, server: scloud15.jafiyun.world, port: 22015, type: trojan, password: 71cd7381-91c6-3566-8cc5-b0f376644765, sni: scloud15.jafiyun.world, skip-cert-verify: false}
