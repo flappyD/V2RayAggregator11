@@ -1,2 +1,1 @@
 proxies:
-  - {name: 🇨🇳 CN-125.88.210.67-037, server: gzyd.jcnode.top, port: 55345, type: trojan, password: 46f171e5-de64-4c27-af50-2ced3d0d2526, sni: rctw01.ckcloud.info, skip-cert-verify: false}
