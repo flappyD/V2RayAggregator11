@@ -1,2 +1,1 @@
 proxies:
-  - {name: 🇨🇳 CN-183.56.229.236-194, server: gzdx01.jcnode.top, port: 34472, type: trojan, password: 64524268-89f3-4cdd-833c-509219762b35, sni: sg03.ckcloud.info, skip-cert-verify: false}
