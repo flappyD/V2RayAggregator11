@@ -17,18 +17,25 @@ dns:
   - https://dns.google/dns-query
   - tls://dns.google:853
 proxies:
-- name: 🇨🇳CN-58.247.254.191-096 | 7.351MB
+- name: 🇨🇳CN-58.247.254.191-062 | 8.472MB
   server: gzyd02.jcnode.top
   port: 22122
   type: trojan
-  password: 4fbb6496-a151-42c3-9911-d48b74c9ccc0
+  password: f7995f65-eb3d-4aba-b1ea-03529bf3e85a
   sni: de01.ckcloud.info
   skip-cert-verify: false
-- name: 🇨🇳CN-58.247.254.191-098 | 6.59MB
+- name: 🇨🇳CN-58.247.254.191-154 | 7.308MB
   server: gzyd02.jcnode.top
   port: 36403
   type: trojan
-  password: 4fbb6496-a151-42c3-9911-d48b74c9ccc0
+  password: c310f403-381a-4b30-ae5f-c3c0e4e575aa
+  sni: uk01.ckcloud.info
+  skip-cert-verify: false
+- name: 🇨🇳CN-58.247.254.191-064 | 6.935MB
+  server: gzyd02.jcnode.top
+  port: 36403
+  type: trojan
+  password: f7995f65-eb3d-4aba-b1ea-03529bf3e85a
   sni: uk01.ckcloud.info
   skip-cert-verify: false
 proxy-groups:
@@ -105,7 +112,8 @@ proxy-groups:
   interval: 300
   tolerance: 100
   proxies:
-  - 🇨🇳CN-58.247.254.191-096 | 7.351MB
-  - 🇨🇳CN-58.247.254.191-098 | 6.59MB
+  - 🇨🇳CN-58.247.254.191-062 | 8.472MB
+  - 🇨🇳CN-58.247.254.191-154 | 7.308MB
+  - 🇨🇳CN-58.247.254.191-064 | 6.935MB
 rules:
 - MATCH,Global ©️
