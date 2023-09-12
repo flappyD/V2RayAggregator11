@@ -1,4 +1,1 @@
 proxies:
-  - {name: 🇨🇳 CN-58.247.254.191-062, server: gzyd02.jcnode.top, port: 22122, type: trojan, password: f7995f65-eb3d-4aba-b1ea-03529bf3e85a, sni: de01.ckcloud.info, skip-cert-verify: false}
-  - {name: 🇨🇳 CN-58.247.254.191-154, server: gzyd02.jcnode.top, port: 36403, type: trojan, password: c310f403-381a-4b30-ae5f-c3c0e4e575aa, sni: uk01.ckcloud.info, skip-cert-verify: false}
-  - {name: 🇨🇳 CN-58.247.254.191-064, server: gzyd02.jcnode.top, port: 36403, type: trojan, password: f7995f65-eb3d-4aba-b1ea-03529bf3e85a, sni: uk01.ckcloud.info, skip-cert-verify: false}
